@@ -1,0 +1,40 @@
+{
+  "products77" : [
+    {
+      "text" : ["text"]
+    },
+    {
+      "subtitle" : ["Подзагаловок"]
+    },
+    {
+      "product" : [
+        {
+          "imgLink" : ["imgLink"],
+          "productLink" : ["productLink"],
+          "productName" : ["name"],
+          "oldPrice" : [],
+          "newPrice" : []  
+        }
+      ]
+    }
+  ],
+  "products52" : [
+    {
+      "text" : ["text"]
+    },
+    {
+      "subtitle" : ["Подзагаловок"]
+    },
+    {
+      "product" : [
+        {
+          "imgLink" : ["imgLink"],
+          "productLink" : ["productLink"],
+          "productName" : ["name"],
+          "oldPrice" : [],
+          "newPrice" : []  
+        }
+      ]
+    }
+  ]
+}

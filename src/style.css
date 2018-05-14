@@ -1,0 +1,25 @@
+.gmrg> table> tbody> tr> td> p {
+  text-indent: 30px;
+}
+.content table td {
+  padding: 0px;
+}
+.content table{
+  width:100%;
+} 
+.ddvLogo{
+  width: 240px;
+}
+.ddvLogo-img{
+  width: 215px;
+}
+.ddvOldPrices{
+  font-size: 13px;
+}
+.ddvNewPrices{
+  color: rgb(121, 20, 0);
+  font-weight: bold;
+}
+.ddvProductName{
+  display: block;
+}

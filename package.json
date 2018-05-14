@@ -1,0 +1,15 @@
+{
+  "name": "bestprice",
+  "version": "1.0.0",
+  "description": "Автоматическое генерирование страницы с лучшими ценами на сайте МясновЪ из *.json файла.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Данилов Дмитрий",
+  "license": "ISC"
+}

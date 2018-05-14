@@ -1,0 +1,66 @@
+- var region52 = "<? if ($_COOKIE[COOKIE_NAME.'CITY_ID'] == 52) {?>"
+- var region77 = "<? if ($_COOKIE[COOKIE_NAME.'CITY_ID'] == 77) {?>"
+- var regionEnd = "<? } ?>"
+
+mixin cycle(productsItem)
+    each productItem, productItemName in productsItem         
+        if(productItemName == 'product')
+            each inProductItem in productItem
+                each item, productName in inProductItem
+                    if(productName == 'imgLink')
+                        - var imgLink = item
+                    if(productName == 'productLink')
+                        - var productLink = item
+                    if(productName == 'productName')
+                        - var prodName = item
+                    if(productName == 'oldPrice')
+                        - var oldPrice = item
+                    if(productName == 'newPrice')
+                        - var newPrice = item
+                        +productRowDDV(imgLink, productLink, prodName, oldPrice, newPrice)
+        
+        if(productItemName == 'subtitle')
+            each inProductItem in productItem
+                tr: td(colspan="2"): h2= inProductItem
+        
+        if(productItemName == 'text')
+            each inProductItem in productItem
+                tr: td(colspan="2") !{inProductItem}
+
+mixin productRowDDV(imgLink, productLink, productName, oldPrice, newPrice)
+    tr
+        td.ddvLogo
+            a(href="" + productLink)
+                img.ddvLogo-img(src="" + imgLink)
+        
+        td
+            a.ddvProductName(href="" + productLink)
+                span= productName
+            br
+            
+            if(oldPrice != '')
+                span.ddvOldPrices Старая цена #{oldPrice} руб./кг
+                br
+                span.ddvNewPrices Новая цена #{newPrice} руб./кг
+            
+            else
+                span.ddvNewPrices Цена #{newPrice} руб./кг
+
+style
+    include style.css
+
+.gmrg
+    |!{region77}
+    
+    table: tbody
+        each productsItem in products77
+            +cycle(productsItem)
+    
+    |!{regionEnd}
+    |!{region52}
+    
+    table: tbody
+        each productsItem in products52
+            +cycle(productsItem)
+    
+    |!{regionEnd}
